@@ -1,12 +1,25 @@
 ﻿using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DI_ConsoleApplication
 {
-    class Program
+    public class Program
     {
+        private static IServiceProvider ServiceProvider { get; set; }
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RegisterServices();
+
+            var game = new WalkingSimulatorGame(ServiceProvider.GetService<IActionProvider>());
+            game.StartInputLoop();
+        }
+
+        private static void RegisterServices()
+        {
+            ServiceProvider = new ServiceCollection()
+                .AddScoped<IActionProvider, ActionProvider>()
+                .BuildServiceProvider();
         }
     }
 }
