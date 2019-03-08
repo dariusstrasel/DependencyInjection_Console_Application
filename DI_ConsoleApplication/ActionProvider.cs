@@ -29,28 +29,12 @@ namespace DI_ConsoleApplication
             Console.WriteLine("u: up, d: down, l: left, r: right");    
         }
 
-        public void WalkUp()
-        {
-            Console.WriteLine(">> Walked Up");
-            Console.WriteLine("");
-        }
+        private void WalkUp() => Console.WriteLine(">> Walked Up");
 
-        public void WalkDown()
-        {
-            Console.WriteLine(">> Walked Down");
-            Console.WriteLine("");
-        }
+        public void WalkDown() => Console.WriteLine(">> Walked Down");
 
-        public void WalkRight()
-        {
-            Console.WriteLine(">> Walked Right");
-            Console.WriteLine("");
-        }
+        public void WalkRight() => Console.WriteLine(">> Walked Right");
 
-        public void WalkLeft()
-        {
-            Console.WriteLine(">> Walked Left");
-            Console.WriteLine("");
-        }
+        public void WalkLeft() => Console.WriteLine(">> Walked Left");
     }
 }
