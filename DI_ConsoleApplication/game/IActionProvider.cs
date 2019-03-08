@@ -1,4 +1,4 @@
-namespace DI_ConsoleApplication
+namespace DI_ConsoleApplication.game
 {
     public interface IActionProvider
     {

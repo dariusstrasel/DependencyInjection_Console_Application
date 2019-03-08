@@ -1,6 +1,6 @@
 using System;
 
-namespace DI_ConsoleApplication
+namespace DI_ConsoleApplication.game
 {
     public class ActionProvider : IActionProvider
     {

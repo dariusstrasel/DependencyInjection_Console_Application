@@ -1,4 +1,5 @@
 using System;
+using DI_ConsoleApplication.game;
 
 namespace DI_ConsoleApplication.demo
 {
