@@ -1,6 +1,4 @@
 ﻿using System;
-using DI_ConsoleApplication.game;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace DI_ConsoleApplication
 {
