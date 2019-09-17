@@ -1,21 +1,24 @@
 using System;
-using DI_ConsoleApplication.game;
 
-namespace DI_ConsoleApplication.demo
+namespace DI_ConsoleApplication.complete.game
 {
-    public class WalkingSimulatorGameWithOutDi
+    public class WalkingSimulatorGame
     {
-        private ActionProvider actionProvider;
-    
+        private readonly IActionProvider actionProvider;
+
+        public WalkingSimulatorGame(IActionProvider actionProvider)
+        {
+            this.actionProvider = actionProvider;
+        }
+
         public void StartInputLoop()
         {
-            actionProvider = new ActionProvider();
             Console.WriteLine("Welcome to Walking Simulator 2019! Type 'exit' to exit.");
 
             var acceptingInput = true;
             while (acceptingInput)
             {
-                actionProvider.DisplayActions();                
+                actionProvider.DisplayActions();
                 var inputText = Console.ReadLine();
 
                 if (inputText == "exit")

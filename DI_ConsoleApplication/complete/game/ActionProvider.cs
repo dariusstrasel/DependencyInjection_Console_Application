@@ -1,8 +1,8 @@
 using System;
 
-namespace DI_ConsoleApplication.game
+namespace DI_ConsoleApplication.complete.game
 {
-    public class ActionProvider
+    public class ActionProvider : IActionProvider
     {
         public void ProcessAction(string inputText)
         {

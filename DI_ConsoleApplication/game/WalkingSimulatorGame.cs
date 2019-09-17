@@ -4,15 +4,11 @@ namespace DI_ConsoleApplication.game
 {
     public class WalkingSimulatorGame
     {
-        private readonly IActionProvider actionProvider;
-        
-        public WalkingSimulatorGame(IActionProvider actionProvider)
-        {
-            this.actionProvider = actionProvider;
-        }
-        
+        private ActionProvider actionProvider;
+
         public void StartInputLoop()
         {
+            actionProvider = new ActionProvider();
             Console.WriteLine("Welcome to Walking Simulator 2019! Type 'exit' to exit.");
 
             var acceptingInput = true;
